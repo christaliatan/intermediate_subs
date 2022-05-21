@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">StoryApplication1</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="title_signup">Complete your data here!</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Enter your data first!</string>
+    <string name="name">Name</string>
+
+    <string name="logout">logout</string>
+    <string name="description">Description</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload</string>
+    <string name="detail">detail</string>
+    <string name="capture_image">capture image</string>
+    <string name="switch_camera">switch camera</string>
+    <string name="image">image</string>
+    <string name="retry">retry</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="create_account">create account</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="signin">SIGN IN</string>
+</resources>

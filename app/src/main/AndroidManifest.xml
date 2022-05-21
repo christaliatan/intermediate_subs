@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicoding.picodiploma.storyApp">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB-aRQ3FN4krC5dw--kN3YDQauIl9twWC0" />
+
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.camera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.story.AddStoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.detail.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.signup.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.dicoding.picodiploma.storyApp.view.welcome.WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
