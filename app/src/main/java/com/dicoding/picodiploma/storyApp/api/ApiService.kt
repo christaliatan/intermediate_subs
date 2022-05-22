@@ -14,14 +14,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 
 data class RegisterResponse(
-    @field:SerializedName(false.toString())
     val error: Boolean,
-    @field:SerializedName("User Created")
     val message: String
 )
 
 data class LoginResponse(
-    @field:SerializedName(false.toString())
     val error: Boolean,
     @field:SerializedName("success")
     val message: String,
@@ -30,9 +27,7 @@ data class LoginResponse(
 )
 
 data class AddNewStoryResponse(
-    @field:SerializedName(false.toString())
     val error: Boolean,
-    @field:SerializedName("success")
     val message: String
 )
 

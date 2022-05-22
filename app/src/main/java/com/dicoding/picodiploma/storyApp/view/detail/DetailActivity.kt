@@ -3,7 +3,7 @@ package com.dicoding.picodiploma.storyApp.view.detail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
-import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityDetailBinding
+import com.dicoding.picodiploma.storyApp.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding

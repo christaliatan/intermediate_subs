@@ -10,7 +10,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
-import com.dicoding.picodiploma.loginwithanimation.R
+import com.dicoding.picodiploma.storyApp.R
 
 class MyEditText: AppCompatEditText, View.OnTouchListener {
 
@@ -32,8 +32,6 @@ class MyEditText: AppCompatEditText, View.OnTouchListener {
     private fun init() {
         clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_clear) as Drawable
         setOnTouchListener(this)
-
-        bgEditText = ContextCompat.getDrawable(context, R.drawable.bg_edit_text) as Drawable
 
         addTextChangedListener(object  : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {

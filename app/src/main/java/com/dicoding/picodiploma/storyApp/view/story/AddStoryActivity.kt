@@ -17,9 +17,9 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityAddStoryBinding
 import com.dicoding.picodiploma.storyApp.api.AddNewStoryResponse
 import com.dicoding.picodiploma.storyApp.api.ApiConfig
+import com.dicoding.picodiploma.storyApp.databinding.ActivityAddStoryBinding
 import com.dicoding.picodiploma.storyApp.model.UserPreference
 import com.dicoding.picodiploma.storyApp.view.ViewModelFactory
 import com.dicoding.picodiploma.storyApp.view.camera.CameraActivity

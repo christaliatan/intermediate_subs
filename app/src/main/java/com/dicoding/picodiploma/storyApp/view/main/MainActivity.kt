@@ -13,8 +13,8 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.picodiploma.loginwithanimation.R
-import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityMainBinding
+import com.dicoding.picodiploma.storyApp.R
+import com.dicoding.picodiploma.storyApp.databinding.ActivityMainBinding
 import com.dicoding.picodiploma.storyApp.model.UserPreference
 import com.dicoding.picodiploma.storyApp.view.ViewModelFactory
 import com.dicoding.picodiploma.storyApp.view.detail.DetailActivity

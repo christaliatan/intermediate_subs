@@ -5,7 +5,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.picodiploma.loginwithanimation.databinding.ItemStoryLoadingBinding
+import com.dicoding.picodiploma.storyApp.databinding.ItemStoryLoadingBinding
 
 class LoadingStateAdapter(private val retry: () -> Unit) : LoadStateAdapter<LoadingStateAdapter.LoadingStateViewHolder>() {
 

@@ -13,7 +13,7 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.dicoding.picodiploma.loginwithanimation.databinding.ActivityCameraBinding
+import com.dicoding.picodiploma.storyApp.databinding.ActivityCameraBinding
 import com.dicoding.picodiploma.storyApp.view.story.AddStoryActivity
 import com.dicoding.picodiploma.storyApp.view.story.createFile
 import java.util.concurrent.ExecutorService

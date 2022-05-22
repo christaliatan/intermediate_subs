@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.net.Uri
 import android.os.Environment
-import com.dicoding.picodiploma.loginwithanimation.R
+import com.dicoding.picodiploma.storyApp.R
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*

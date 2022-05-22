@@ -7,7 +7,7 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dicoding.picodiploma.loginwithanimation.databinding.AdapterStoryBinding
+import com.dicoding.picodiploma.storyApp.databinding.AdapterStoryBinding
 
 class AdapterStory: PagingDataAdapter<ListStory, AdapterStory.ViewHolder>(DIFF_CALLBACK) {
 
