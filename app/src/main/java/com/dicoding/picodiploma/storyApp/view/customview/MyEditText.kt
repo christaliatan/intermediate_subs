@@ -50,7 +50,6 @@ class MyEditText: AppCompatEditText, View.OnTouchListener {
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        background = bgEditText
         textAlignment = View.TEXT_ALIGNMENT_VIEW_START
     }
 
