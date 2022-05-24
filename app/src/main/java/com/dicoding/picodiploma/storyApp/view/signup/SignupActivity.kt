@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.dicoding.picodiploma.storyApp.api.ApiConfig
 import com.dicoding.picodiploma.storyApp.api.RegisterResponse
@@ -44,44 +45,50 @@ class SignupActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.signupSubmit.setOnClickListener {
+            Log.d("signupSubmit", "setupAction: ")
             val name = binding.nameEditText.text.toString()
-            val email = binding.emailEditText.text.toString()
+            val email = binding.emailInput.text.toString()
             val password = binding.passwordEditText.text.toString()
             when {
                 name.isEmpty() -> {
+                    Log.d("signupSubmit", "name.isEmpty(): ")
                     binding.nameEditTextLayout.error = "Masukkan email"
                 }
                 email.isEmpty() -> {
+                    Log.d("signupSubmit", "email.isEmpty(): ")
                     binding.emailEditTextLayout.error = "Masukkan email"
                 }
                 password.isEmpty() -> {
+                    Log.d("signupSubmit", "password.isEmpty()")
                     binding.passwordEditTextLayout.error = "Masukkan password"
                 }
                 password.length < 6 -> {
+                    Log.d("signupSubmit", "password.length")
                     binding.passwordEditTextLayout.error = "Password harus lebih dari 6"
                 }
                 else -> {
+                    Toast.makeText(this, "Tunggu sebentar...", Toast.LENGTH_SHORT).show()
                     ApiConfig.instances.register(name, email, password).enqueue(object :
                         Callback<RegisterResponse> {
-                        override fun onResponse(
-                            call: Call<RegisterResponse>,
-                            response: Response<RegisterResponse>
-                        ) {
+                        override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
                             Log.d("Register", name)
-
-                            AlertDialog.Builder(this@SignupActivity).apply {
-                                setTitle("Yeah!")
-                                setMessage("Akunnya sudah jadi nih. Yuk, login dan belajar coding.")
-                                setPositiveButton("Lanjut") { _, _ ->
-                                    finish()
+                            if(response.isSuccessful) {
+                                AlertDialog.Builder(this@SignupActivity).apply {
+                                    setTitle("Yeah!")
+                                    setMessage("Akunnya sudah jadi nih. Yuk, login dan belajar coding.")
+                                    setPositiveButton("Lanjut") { _, _ ->
+                                        finish()
+                                    }
+                                    create()
+                                    show()
                                 }
-                                create()
-                                show()
+                            } else {
+                                Toast.makeText(this@SignupActivity,  response.errorBody()?.string(), Toast.LENGTH_LONG).show()
                             }
                         }
 
                         override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
-                            Log.e("Register", "error")
+                            Toast.makeText(this@SignupActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
                         }
 
                     })
