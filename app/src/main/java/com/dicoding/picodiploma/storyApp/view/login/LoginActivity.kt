@@ -70,13 +70,13 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.passwordEditText.text.toString()
             when {
                 email.isEmpty() -> {
-                    binding.emailEditTextLayout.error = "Masukkan email"
+                    binding.emailEditText.error = "Masukkan email"
                 }
                 password.isEmpty() -> {
-                    binding.passwordEditTextLayout.error = "Masukkan password"
+                    binding.passwordEditText.error = "Masukkan password"
                 }
                 password.length < 6 -> {
-                    binding.passwordEditTextLayout.error = "Password harus lebih dari 6"
+                    binding.passwordEditText.error = "Password harus lebih dari 6"
                 }
                 else -> {
                     ApiConfig.instances.login(email, password).enqueue(object :
