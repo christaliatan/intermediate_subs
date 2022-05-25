@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StoryApplication1</string>
+    <string name="app_name">StoryApplication</string>
     <string name="signup">Signup</string>
     <string name="login">Login</string>
     <string name="welcome">WELCOME!</string>
