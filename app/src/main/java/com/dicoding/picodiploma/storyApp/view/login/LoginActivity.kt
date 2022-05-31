@@ -70,13 +70,13 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.passwordEditText.text.toString()
             when {
                 email.isEmpty() -> {
-                    binding.emailEditText.error = "Masukkan email"
+                    binding.emailEditText.error = "Enter email"
                 }
                 password.isEmpty() -> {
-                    binding.passwordEditText.error = "Masukkan password"
+                    binding.passwordEditText.error = "Enter password"
                 }
                 password.length < 6 -> {
-                    binding.passwordEditText.error = "Password harus lebih dari 6"
+                    binding.passwordEditText.error = "Passwords must be at least 6 characters"
                 }
                 else -> {
                     ApiConfig.instances.login(email, password).enqueue(object :
@@ -129,7 +129,17 @@ class LoginActivity : AppCompatActivity() {
             repeatCount = ObjectAnimator.INFINITE
             repeatMode = ObjectAnimator.REVERSE
         }.start()
+        val message = ObjectAnimator.ofFloat(binding.messageTextView, View.ALPHA, 1f).setDuration(500)
+        val emailTextView = ObjectAnimator.ofFloat(binding.email, View.ALPHA, 1f).setDuration(500)
+        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
+        val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
+        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.loginSubmit, View.ALPHA, 1f).setDuration(500)
 
+        AnimatorSet().apply {
+            playSequentially(message, emailTextView, emailEditTextLayout, passwordTextView, passwordEditTextLayout, login)
+            startDelay = 500
+        }.start()
     }
 
 }

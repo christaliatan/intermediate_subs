@@ -24,4 +24,5 @@
     <string name="create_account">create account</string>
     <string name="add_photo">Add Photo</string>
     <string name="signin">SIGN IN</string>
+    <string name="enter_your_password">Enter your password</string>
 </resources>

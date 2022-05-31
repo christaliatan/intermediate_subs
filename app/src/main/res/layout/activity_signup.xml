@@ -46,16 +46,17 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameEditTextLayout"
+        android:id="@+id/nameInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/enter_your_name"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupimage"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         app:startIconDrawable="@drawable/person">
 
         <com.dicoding.picodiploma.storyApp.view.customview.MyEditText
@@ -66,19 +67,6 @@
             android:inputType="text"
             app:passwordToggleEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:hint="@string/enter_your_name"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        android:autofillHints="Enter your name"/>
 
     <TextView
         android:id="@+id/email"
@@ -95,6 +83,7 @@
         android:id="@+id/emailEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
+        android:hint="@string/enter_your_email"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -112,18 +101,6 @@
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/emailInput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:hint="@string/enter_your_email"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        android:autofillHints="Enter your name"/>
 
     <TextView
         android:id="@+id/password"
@@ -134,13 +111,14 @@
         android:text="@string/password"
         android:textColor="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordEditTextLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:hint="@string/enter_your_password"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:alpha="0"
