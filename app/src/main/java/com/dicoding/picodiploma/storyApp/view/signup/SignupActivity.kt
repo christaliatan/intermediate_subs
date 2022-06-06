@@ -47,12 +47,12 @@ class SignupActivity : AppCompatActivity() {
         binding.signupSubmit.setOnClickListener {
             Log.d("signupSubmit", "setupAction: ")
             val name = binding.nameEditText.text.toString()
-            val email = binding.emailInput.text.toString()
+            val email = binding.emailEditTextLayout.editText.toString()
             val password = binding.passwordEditText.text.toString()
             when {
                 name.isEmpty() -> {
                     Log.d("signupSubmit", "name.isEmpty(): ")
-                    binding.nameEditTextLayout.error = "Masukkan email"
+                    binding.nameInput.error = "Masukkan email"
                 }
                 email.isEmpty() -> {
                     Log.d("signupSubmit", "email.isEmpty(): ")
@@ -108,7 +108,7 @@ class SignupActivity : AppCompatActivity() {
         val nameTextView = ObjectAnimator.ofFloat(binding.name, View.ALPHA, 1f).setDuration(500)
         val nameEditTextLayout = ObjectAnimator.ofFloat(binding.nameInput, View.ALPHA, 1f).setDuration(500)
         val emailTextView = ObjectAnimator.ofFloat(binding.email, View.ALPHA, 1f).setDuration(500)
-        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailInput, View.ALPHA, 1f).setDuration(500)
+        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
         val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val signup = ObjectAnimator.ofFloat(binding.signupSubmit, View.ALPHA, 1f).setDuration(500)
