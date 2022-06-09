@@ -52,22 +52,22 @@ class SignupActivity : AppCompatActivity() {
             when {
                 name.isEmpty() -> {
                     Log.d("signupSubmit", "name.isEmpty(): ")
-                    binding.nameInput.error = "Masukkan email"
+                    binding.nameInput.error = "Enter your email"
                 }
                 email.isEmpty() -> {
                     Log.d("signupSubmit", "email.isEmpty(): ")
-                    binding.emailEditTextLayout.error = "Masukkan email"
+                    binding.emailEditTextLayout.error = "Enter your email"
                 }
                 password.isEmpty() -> {
                     Log.d("signupSubmit", "password.isEmpty()")
-                    binding.passwordEditTextLayout.error = "Masukkan password"
+                    binding.passwordEditTextLayout.error = "Enter your password"
                 }
                 password.length < 6 -> {
                     Log.d("signupSubmit", "password.length")
-                    binding.passwordEditTextLayout.error = "Password harus lebih dari 6"
+                    binding.passwordEditTextLayout.error = "Your password must be at least 6 characters"
                 }
                 else -> {
-                    Toast.makeText(this, "Tunggu sebentar...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "waiting...", Toast.LENGTH_SHORT).show()
                     ApiConfig.instances.register(name, email, password).enqueue(object :
                         Callback<RegisterResponse> {
                         override fun onResponse(call: Call<RegisterResponse>, response: Response<RegisterResponse>) {
@@ -75,8 +75,8 @@ class SignupActivity : AppCompatActivity() {
                             if(response.isSuccessful) {
                                 AlertDialog.Builder(this@SignupActivity).apply {
                                     setTitle("Yeah!")
-                                    setMessage("Akunnya sudah jadi nih. Yuk, login dan belajar coding.")
-                                    setPositiveButton("Lanjut") { _, _ ->
+                                    setMessage("Your account is ready")
+                                    setPositiveButton("Next") { _, _ ->
                                         finish()
                                     }
                                     create()

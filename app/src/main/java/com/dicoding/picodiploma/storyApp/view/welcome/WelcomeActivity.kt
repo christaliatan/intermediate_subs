@@ -49,7 +49,7 @@ class WelcomeActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else if (!isLogin) {
-                Toast.makeText(this, "Login dahulu", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login first", Toast.LENGTH_SHORT).show()
             }
         }
     }

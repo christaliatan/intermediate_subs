@@ -60,7 +60,6 @@
         app:startIconDrawable="@drawable/person">
 
         <com.dicoding.picodiploma.storyApp.view.customview.MyEditText
-            android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -94,7 +93,6 @@
         app:startIconDrawable="@drawable/email">
 
         <com.dicoding.picodiploma.storyApp.view.customview.MyEditText
-            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -129,7 +127,6 @@
         app:startIconDrawable="@drawable/lock">
 
         <com.dicoding.picodiploma.storyApp.view.customview.MyEditTextPassword
-            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -139,7 +136,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/signupSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -159,7 +155,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
         android:orientation="vertical"

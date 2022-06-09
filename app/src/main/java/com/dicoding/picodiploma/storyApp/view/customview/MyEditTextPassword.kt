@@ -15,7 +15,6 @@ import com.dicoding.picodiploma.storyApp.R
 class MyEditTextPassword: AppCompatEditText, View.OnTouchListener {
 
     private lateinit var clearButtonImage: Drawable
-    private lateinit var bgEditText: Drawable
 
     constructor(context: Context) : super(context) {
         init()

@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import android.view.*
 import androidx.datastore.core.DataStore
@@ -19,6 +18,7 @@ import com.dicoding.picodiploma.storyApp.model.UserPreference
 import com.dicoding.picodiploma.storyApp.view.ViewModelFactory
 import com.dicoding.picodiploma.storyApp.view.detail.DetailActivity
 import com.dicoding.picodiploma.storyApp.view.login.LoginViewModel
+import com.dicoding.picodiploma.storyApp.view.maps.MapsActivity
 import com.dicoding.picodiploma.storyApp.view.story.AdapterStory
 import com.dicoding.picodiploma.storyApp.view.story.AddStoryActivity
 import com.dicoding.picodiploma.storyApp.view.story.ListStory
@@ -120,6 +120,9 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, WelcomeActivity::class.java)
                 startActivity(intent)
                 finish()
+            }
+            R.id.maps -> {
+                val intent = Intent(this, MapsActivity::class.java)
             }
         }
         return super.onOptionsItemSelected(item)
