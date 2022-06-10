@@ -11,13 +11,13 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.tvDetailName.text = intent.getStringExtra(EXTRA_NAME)
-        binding.tvDetailDescription.text = intent.getStringExtra(EXTRA_DESCRIPTION)
+        binding.detailName.text = intent.getStringExtra(EXTRA_NAME)
+        binding.detailDescription.text = intent.getStringExtra(EXTRA_DESCRIPTION)
 
         Glide.with(this)
             .load(intent.getStringExtra(EXTRA_PHOTO))
             .centerCrop()
-            .into(binding.ivDetailPreview)
+            .into(binding.detailPreview)
     }
 
     companion object{

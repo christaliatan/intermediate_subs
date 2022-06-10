@@ -26,13 +26,13 @@
         <entry key="app/src/main/res/layout/activity_add_story.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.24166666666666667" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.13701486172043198" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.2296195652173913" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.2296195652173913" />
         <entry key="app/src/main/res/layout/adapter_story.xml" value="0.24166666666666667" />
-        <entry key="app/src/main/res/layout/item_story_loading.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/item_story_loading.xml" value="0.1" />
         <entry key="app/src/main/res/menu/option_menu.xml" value="0.1" />
       </map>
     </option>

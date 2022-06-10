@@ -65,18 +65,18 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.loginSubmit.setOnClickListener {
-            val email = binding.emailEditText.text.toString()
-            val password = binding.passwordEditText.text.toString()
+        binding.loginText.setOnClickListener {
+            val email = binding.emailEditTextLayout.editText.toString()
+            val password = binding.passwordEditTextLayout.editText.toString()
             when {
                 email.isEmpty() -> {
-                    binding.emailEditText.error = "Enter email"
+                    binding.emailEditTextLayout.error = "Enter email"
                 }
                 password.isEmpty() -> {
-                    binding.passwordEditText.error = "Enter password"
+                    binding.passwordEditTextLayout.error = "Enter password"
                 }
                 password.length < 6 -> {
-                    binding.passwordEditText.error = "Passwords must be at least 6 characters"
+                    binding.passwordEditTextLayout.error = "Passwords must be at least 6 characters"
                 }
                 else -> {
                     ApiConfig.instances.login(email, password).enqueue(object :
@@ -134,7 +134,7 @@ class LoginActivity : AppCompatActivity() {
         val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
         val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val login = ObjectAnimator.ofFloat(binding.loginSubmit, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.loginText, View.ALPHA, 1f).setDuration(500)
 
         AnimatorSet().apply {
             playSequentially(message, emailTextView, emailEditTextLayout, passwordTextView, passwordEditTextLayout, login)

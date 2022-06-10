@@ -44,11 +44,11 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.signupSubmit.setOnClickListener {
+        binding.signupButton.setOnClickListener {
             Log.d("signupSubmit", "setupAction: ")
-            val name = binding.nameEditText.text.toString()
+            val name = binding.nameInput.editText.toString()
             val email = binding.emailEditTextLayout.editText.toString()
-            val password = binding.passwordEditText.text.toString()
+            val password = binding.passwordEditTextLayout.editText.toString()
             when {
                 name.isEmpty() -> {
                     Log.d("signupSubmit", "name.isEmpty(): ")
@@ -111,7 +111,7 @@ class SignupActivity : AppCompatActivity() {
         val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
         val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
         val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val signup = ObjectAnimator.ofFloat(binding.signupSubmit, View.ALPHA, 1f).setDuration(500)
+        val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
 
 
         AnimatorSet().apply {
