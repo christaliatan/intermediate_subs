@@ -21,7 +21,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB-aRQ3FN4krC5dw--kN3YDQauIl9twWC0" />
+            android:value="AIzaSyBhWCK_RFeWHqjQXVowdAswoqgjGNpkJg0" />
 
         <activity
             android:name="com.dicoding.picodiploma.storyApp.view.camera.CameraActivity"
