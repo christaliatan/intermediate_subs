@@ -44,27 +44,27 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.signupButton.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
             Log.d("signupSubmit", "setupAction: ")
-            val name = binding.nameInput.editText.toString()
-            val email = binding.emailEditTextLayout.editText.toString()
-            val password = binding.passwordEditTextLayout.editText.toString()
+            val name = binding.fillName.editText.toString()
+            val email = binding.fillEmail.editText.toString()
+            val password = binding.fillPassword.editText.toString()
             when {
                 name.isEmpty() -> {
                     Log.d("signupSubmit", "name.isEmpty(): ")
-                    binding.nameInput.error = "Enter your email"
+                    binding.fillName.error = "Enter your email"
                 }
                 email.isEmpty() -> {
                     Log.d("signupSubmit", "email.isEmpty(): ")
-                    binding.emailEditTextLayout.error = "Enter your email"
+                    binding.fillEmail.error = "Enter your email"
                 }
                 password.isEmpty() -> {
                     Log.d("signupSubmit", "password.isEmpty()")
-                    binding.passwordEditTextLayout.error = "Enter your password"
+                    binding.fillPassword.error = "Enter your password"
                 }
                 password.length < 6 -> {
                     Log.d("signupSubmit", "password.length")
-                    binding.passwordEditTextLayout.error = "Your password must be at least 6 characters"
+                    binding.fillPassword.error = "Your password must be at least 6 characters"
                 }
                 else -> {
                     Toast.makeText(this, "waiting...", Toast.LENGTH_SHORT).show()
@@ -98,20 +98,20 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun playAnimation() {
-        ObjectAnimator.ofFloat(binding.signupimage, View.TRANSLATION_X, -30f, 30f).apply {
-            duration = 6000
+        ObjectAnimator.ofFloat(binding.signupImage, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 5000
             repeatCount = ObjectAnimator.INFINITE
             repeatMode = ObjectAnimator.REVERSE
         }.start()
 
-        val title = ObjectAnimator.ofFloat(binding.signupText, View.ALPHA, 1f).setDuration(500)
-        val nameTextView = ObjectAnimator.ofFloat(binding.name, View.ALPHA, 1f).setDuration(500)
-        val nameEditTextLayout = ObjectAnimator.ofFloat(binding.nameInput, View.ALPHA, 1f).setDuration(500)
-        val emailTextView = ObjectAnimator.ofFloat(binding.email, View.ALPHA, 1f).setDuration(500)
-        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
-        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
-        val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
+        val title = ObjectAnimator.ofFloat(binding.signupText, View.ALPHA, 1f).setDuration(200)
+        val nameTextView = ObjectAnimator.ofFloat(binding.name, View.ALPHA, 1f).setDuration(200)
+        val nameEditTextLayout = ObjectAnimator.ofFloat(binding.fillName, View.ALPHA, 1f).setDuration(200)
+        val emailTextView = ObjectAnimator.ofFloat(binding.email, View.ALPHA, 1f).setDuration(200)
+        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.fillEmail, View.ALPHA, 1f).setDuration(200)
+        val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(200)
+        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.fillPassword, View.ALPHA, 1f).setDuration(200)
+        val signup = ObjectAnimator.ofFloat(binding.btnSignUp, View.ALPHA, 1f).setDuration(200)
 
 
         AnimatorSet().apply {
@@ -125,7 +125,7 @@ class SignupActivity : AppCompatActivity() {
                 passwordEditTextLayout,
                 signup
             )
-            startDelay = 500
+            startDelay = 400
         }.start()
     }
 }

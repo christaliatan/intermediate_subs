@@ -53,7 +53,7 @@ class AddStoryActivity : AppCompatActivity() {
         actionBar()
 
         loginViewModel = ViewModelProvider(this, ViewModelFactory(UserPreference.getInstance(dataStore)))[LoginViewModel::class.java]
-        binding.btnCameraX.setOnClickListener { startCameraX() }
+        binding.btnCamera.setOnClickListener { startCameraX() }
         binding.btnGallery.setOnClickListener { startGallery() }
         binding.btnUpload.setOnClickListener { uploadImage() }
     }
@@ -79,7 +79,7 @@ class AddStoryActivity : AppCompatActivity() {
     private fun uploadImage() {
         if (getFile != null) {
             val file = reduceFileImage(getFile as File)
-            val descriptionDetail = binding.etlDescription.editText.toString()
+            val descriptionDetail = binding.description.editText.toString()
             val description = descriptionDetail.toRequestBody("text/plain".toMediaType())
             val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData("photo", file.name, requestImageFile)
@@ -114,7 +114,7 @@ class AddStoryActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_CODE_PERMISSIONS) {
             if (!allPermissionsGranted()) {
-                Toast.makeText(this, "Tidak mendapatkan permission.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Didn't get permission", Toast.LENGTH_SHORT).show()
                 finish()
             }
         }

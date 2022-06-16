@@ -66,17 +66,17 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupAction() {
         binding.loginText.setOnClickListener {
-            val email = binding.emailEditTextLayout.editText.toString()
-            val password = binding.passwordEditTextLayout.editText.toString()
+            val email = binding.fillEmail.editText.toString()
+            val password = binding.fillPassword.editText.toString()
             when {
                 email.isEmpty() -> {
-                    binding.emailEditTextLayout.error = "Enter email"
+                    binding.fillEmail.error = "Enter email"
                 }
                 password.isEmpty() -> {
-                    binding.passwordEditTextLayout.error = "Enter password"
+                    binding.fillPassword.error = "Enter password"
                 }
                 password.length < 6 -> {
-                    binding.passwordEditTextLayout.error = "Passwords must be at least 6 characters"
+                    binding.fillPassword.error = "Passwords must be at least 6 characters"
                 }
                 else -> {
                     ApiConfig.instances.login(email, password).enqueue(object :
@@ -124,16 +124,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun playAnimation() {
-        ObjectAnimator.ofFloat(binding.imageView, View.TRANSLATION_X, -30f, 30f).apply {
-            duration = 6000
+        ObjectAnimator.ofFloat(binding.loginImage, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 5000
             repeatCount = ObjectAnimator.INFINITE
             repeatMode = ObjectAnimator.REVERSE
         }.start()
-        val message = ObjectAnimator.ofFloat(binding.messageTextView, View.ALPHA, 1f).setDuration(500)
+        val message = ObjectAnimator.ofFloat(binding.messageLogin, View.ALPHA, 1f).setDuration(500)
         val emailTextView = ObjectAnimator.ofFloat(binding.email, View.ALPHA, 1f).setDuration(500)
-        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(500)
+        val emailEditTextLayout = ObjectAnimator.ofFloat(binding.fillEmail, View.ALPHA, 1f).setDuration(500)
         val passwordTextView = ObjectAnimator.ofFloat(binding.password, View.ALPHA, 1f).setDuration(500)
-        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(500)
+        val passwordEditTextLayout = ObjectAnimator.ofFloat(binding.fillPassword, View.ALPHA, 1f).setDuration(500)
         val login = ObjectAnimator.ofFloat(binding.loginText, View.ALPHA, 1f).setDuration(500)
 
         AnimatorSet().apply {

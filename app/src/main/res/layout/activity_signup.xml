@@ -7,7 +7,7 @@
     tools:context="com.dicoding.picodiploma.storyApp.view.signup.SignupActivity">
 
     <ImageView
-        android:id="@+id/signupimage"
+        android:id="@+id/signupImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -28,9 +28,9 @@
         android:textColor="@color/purple_500"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/signupimage"
-        app:layout_constraintStart_toStartOf="@+id/signupimage"
-        app:layout_constraintTop_toBottomOf="@+id/signupimage"
+        app:layout_constraintEnd_toEndOf="@+id/signupImage"
+        app:layout_constraintStart_toStartOf="@+id/signupImage"
+        app:layout_constraintTop_toBottomOf="@+id/signupImage"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -46,7 +46,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameInput"
+        android:id="@+id/fillName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -76,10 +76,10 @@
         android:text="@string/email"
         android:textColor="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+        app:layout_constraintTop_toBottomOf="@+id/fillName" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailEditTextLayout"
+        android:id="@+id/fillEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:hint="@string/enter_your_email"
@@ -109,10 +109,10 @@
         android:text="@string/password"
         android:textColor="@color/purple_500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/fillEmail" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordEditTextLayout"
+        android:id="@+id/fillPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/signupButton"
+        android:id="@+id/btn_signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/purple_200"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/fillPassword" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"

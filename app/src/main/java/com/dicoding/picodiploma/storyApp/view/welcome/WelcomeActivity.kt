@@ -68,24 +68,24 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun setupAction() {
-        binding.loginButton.setOnClickListener {
+        binding.btnLogIn.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        binding.signupButton.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
         }
     }
 
     private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.logo, View.TRANSLATION_X, -30f, 30f).apply {
-            duration = 6000
+            duration = 5000
             repeatCount = ObjectAnimator.INFINITE
             repeatMode = ObjectAnimator.REVERSE
         }.start()
 
-        val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
-        val signup = ObjectAnimator.ofFloat(binding.signupButton, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.btnLogIn, View.ALPHA, 1f).setDuration(500)
+        val signup = ObjectAnimator.ofFloat(binding.btnSignUp, View.ALPHA, 1f).setDuration(500)
         val title = ObjectAnimator.ofFloat(binding.welcome, View.ALPHA, 1f).setDuration(500)
 
         val together = AnimatorSet().apply {
